@@ -1,0 +1,45 @@
+# ========================================================
+#            Blinkit Stock Tracker Pro - Git Ignore
+# ========================================================
+
+# Sensitive user credentials (DO NOT COMMIT PERSONAL TELEGRAM TOKENS / CHAT IDS)
+config.json
+*.tmp
+
+# Chrome automation runtime & user session data (DO NOT COMMIT COOKIES / LOGINS / 300MB+ BINARIES)
+bot_profile/
+*.pma
+*.pma-journal
+*.log
+DevToolsActivePort
+
+# Python byte-compiled cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Standalone scripts & scratch files
+imerit.py
+scratch/
+
+# Python Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE and Code Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS Generated Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store

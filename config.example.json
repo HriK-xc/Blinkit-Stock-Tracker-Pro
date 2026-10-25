@@ -1,0 +1,20 @@
+{
+  "check_interval": 60,
+  "headless": true,
+  "enable_telegram": true,
+  "telegram_bot_token": "",
+  "telegram_chat_id": "",
+  "enable_sound": true,
+  "sound_beeps": 5,
+  "stop_item_when_found": true,
+  "items": [
+    {
+      "id": "sample-item-1",
+      "name": "Hot Wheels Toy Car",
+      "url": "https://blinkit.com/prn/x/prid/720748",
+      "enabled": true,
+      "last_status": "Idle",
+      "last_checked": ""
+    }
+  ]
+}
