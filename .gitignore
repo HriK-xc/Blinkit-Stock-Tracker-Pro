@@ -18,6 +18,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# PyInstaller Build Output & Specs
+build/
+dist/
+*.spec
+
 # Standalone scripts & scratch files
 imerit.py
 scratch/

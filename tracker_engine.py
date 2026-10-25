@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 import threading
 import requests
@@ -25,7 +26,8 @@ class TrackerEngine:
         self.on_cycle_tick = on_cycle_tick or (lambda remaining_sec: None)
         self.on_state_change = on_state_change or (lambda is_running: None)
         
-        self.bot_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bot_profile")
+        base_dir = os.path.dirname(sys.executable) if getattr(sys, 'frozen', False) else os.path.dirname(os.path.abspath(__file__))
+        self.bot_folder = os.path.join(base_dir, "bot_profile")
         self.driver = None
         self._thread = None
         self._stop_event = threading.Event()

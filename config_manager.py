@@ -1,10 +1,17 @@
+import sys
 import json
 import os
 import uuid
 import copy
 import threading
 
-CONFIG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.json")
+def get_base_dir():
+    if getattr(sys, 'frozen', False):
+        return os.path.dirname(sys.executable)
+    return os.path.dirname(os.path.abspath(__file__))
+
+BASE_DIR = get_base_dir()
+CONFIG_FILE = os.path.join(BASE_DIR, "config.json")
 
 DEFAULT_CONFIG = {
     "check_interval": 60,

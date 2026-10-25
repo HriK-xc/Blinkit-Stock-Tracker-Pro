@@ -1,5 +1,6 @@
 import time
 import os
+import sys
 import json
 import requests
 from selenium import webdriver
@@ -17,8 +18,9 @@ except ImportError:
 #        CONFIG LOADER (FROM CONFIG.JSON)
 # ==========================================
 
-BOT_DATA_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bot_profile")
-CONFIG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.json")
+BASE_DIR = os.path.dirname(sys.executable) if getattr(sys, 'frozen', False) else os.path.dirname(os.path.abspath(__file__))
+BOT_DATA_FOLDER = os.path.join(BASE_DIR, "bot_profile")
+CONFIG_PATH = os.path.join(BASE_DIR, "config.json")
 
 TRACKING_LIST = {}
 CHECK_INTERVAL = 60

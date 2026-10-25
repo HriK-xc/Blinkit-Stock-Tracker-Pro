@@ -61,6 +61,12 @@ A desktop Windows application to track out-of-stock items on **Blinkit** in the 
   python app.py
   ```
 
+### 4. Building a Standalone `.exe`
+If you want to package the app into a single executable file that runs on any Windows machine without requiring Python:
+- Simply double-click **`build_exe.bat`**.
+- The compiled executable will be placed in the `dist/` directory:
+  `dist\Blinkit Stock Tracker.exe`
+
 ---
 
 ## 🛠️ Initial Setup Instructions
@@ -96,6 +102,7 @@ Blinkit/
 ├── requirements.txt            # Python dependencies
 ├── Launch_Blinkit_Tracker.bat  # Silent double-click Windows launcher
 ├── Launch_Debug_Console.bat    # Debug launcher with live console window
+├── build_exe.bat               # One-click PyInstaller standalone EXE compiler
 ├── blinkitbot.py               # Standalone CLI alternative script
 ├── .gitignore                  # Git ignore rules (protects credentials & cache)
 ├── LICENSE                     # MIT Open Source License
